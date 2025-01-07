@@ -1,0 +1,35 @@
+.card {
+  width: 413px;
+}
+
+.card__image {
+  height: 413px;
+  width: 413px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0 0;
+}
+
+.card__like-btn {
+  background-image: url(../images/Heart.svg);
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  height: 20px;
+  width: 23px;
+  opacity: 40%;
+  margin-left: 8px;
+}
+
+.card__title {
+  color: #212121;
+  padding: 0;
+  margin: 0;
+}
