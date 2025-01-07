@@ -1,10 +1,6 @@
-.card {
-  width: 413px;
-}
-
 .card__image {
   height: 413px;
-  width: 413px;
+  width: 100%;
   object-fit: cover;
   display: block;
   border-radius: 8px;
@@ -28,8 +24,32 @@
   margin-left: 8px;
 }
 
+.card__like-btn:hover {
+  opacity: 1;
+}
+
 .card__title {
   color: #212121;
   padding: 0;
   margin: 0;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 413px;
+}
+
+@media screen and (max-width: 627px) {
+  .card__image {
+    height: 288px;
+  }
+
+  .card__content {
+    margin: 12px 0 0;
+  }
 }

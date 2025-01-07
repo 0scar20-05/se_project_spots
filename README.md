@@ -1,21 +1,27 @@
-# Project 3: Spots
+# Spots
 
-### Overview  
+A social media website.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+## Description
+
+This project was meant to test my ability to make a website look good at any screen resolution, learn to use a Figma design as a reference, and strengthen my HTML and CSS skills as a whole. To make the website look good at varying resolutions I applied a specific class selector to the parent class selector of every section. This selector was so prevalent because it contained all the components on the page. This is vital for larger resolutions. The following GIF demonstrates the website with, and without the class selector. ![Alt Text](file:///C:/Users/Oscar/projects/se_project_spots/images/page__section.gif) When the screen got too small, I used the Media Queries technique, which allows me to change declarations depending on the screen size. I used this to reposition and resize elements to be more legible.
+The purpose of the website is to share and like photos. The only interactivity at the moment however is being able to change the opacity of buttons when the mouse clicker hovers over them. ![Alt Text](file:///C:/Users/Oscar/projects/se_project_spots/images/Hover.gif) The website features 6 photos and account customization options for a specific user. ![Alt Text](file:///C:/Users/Oscar/projects/se_project_spots/images/Screenshot%202025-01-07%20044652.png)
+
+## Tech Stack
+
+- HTML
+- CSS
+- Responsive Design
+- Flexbox
+- BEM methodology
+- Media Queries
+- CSS importing
+- Terminal use
+- Font importing
+- Hover
+
+## Deployment
+
+This webpage is deployed to GitHub Pages
+
+-Deployment Link:
