@@ -7,41 +7,41 @@
     <meta name="author" content="Oscar Nies" />
     <meta name="description" content="Spots Landing Page" />
     <meta name="keywords" content="HTML, CSS" />
-    <link rel="shortcut icon" href="./favicon.ico" type=".image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img id="sports-logo" alt="Spots' Logo" class="header__logo" />
+        <img id="spots-logo" src="" alt="Spots' Logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="<%=require('../images/avatar.jpg')%>"
-            alt="Bessie Coleman"
-            class="profile__avatar"
-            ;
-          />
+          <div class="profile__avatar-container">
+            <button class="profile_avatar-btn">
+              <img
+                id="pencil-icon"
+                src=""
+                alt="Pencil icon"
+                class="profile__pencil-light"
+              />
+            </button>
+            <img src="" alt="User Avatar" class="profile__avatar" />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
               <img
-                src="<%=require('../images/Pencil.svg')%>"
+                id="pencil"
+                src=""
                 alt="Pencil icon"
                 class="profile__pencil"
-                ;
               />
               Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img
-              src="<%=require('../images/Plus.svg')%>"
-              alt="Plus icon"
-              class="profile__plus"
-              ;
-            />
+            <img id="plus-icon" src="" alt="Plus icon" class="profile__plus" />
             New Post
           </button>
         </section>
@@ -50,7 +50,7 @@
             <template id="card-template">
               <li class="card">
                 <button type="button" class="card__delete-btn"></button>
-                <img id="val-thorens" src="" alt="" class="card__image" />
+                <img src="" alt="" class="card__image" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
                   <button type="button" class="card__like-btn"></button>
@@ -147,6 +147,40 @@
           ></button>
           <img class="modal__image" src="" alt="" />
           <p class="modal__caption"></p>
+        </div>
+      </div>
+
+      <div class="modal" id="avatar-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn"></button>
+          <h2 class="modal__title">Edit avatar</h2>
+          <form name="edit-avatar" class="modal__form" novalidate>
+            <label for="profile-avatar-input" class="modal__label">
+              Avatar
+              <input
+                id="profile-avatar-input"
+                name="avatar"
+                class="modal__input"
+                placeholder="avatar goes here"
+                required
+              />
+              <span id="profile-avatar-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal" id="delete-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn"></button>
+          <h2 class="modal__title">
+            Are you sure you want to delete this image?
+          </h2>
+          <form name="delete-form" class="modal__form_delete" novalidate>
+            <button type="submit" class="modal__delete-btn">Delete</button>
+            <button type="button" class="modal__cancel-btn">Cancel</button>
+          </form>
         </div>
       </div>
     </div>
