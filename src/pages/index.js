@@ -32,7 +32,7 @@ api
     const avatarImage = document.querySelector(".profile__avatar");
     avatarImage.src = userData.avatar;
   })
-  .catch(console.error);
+  .catch((err) => console.error("Couldn't load user", err));
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const cardModalButton = document.querySelector(".profile__add-btn");
@@ -101,7 +101,7 @@ function handleLike(evt, id) {
     .then(() => {
       likeBtn.classList.toggle("card__like-btn_liked");
     })
-    .catch(console.error);
+    .catch((err) => console.error("Couldn't load likes", err));
 }
 
 function getCardElement(data) {
@@ -160,7 +160,7 @@ function handleEditFormSubmit(evt) {
       profileDescription.textContent = data.about;
       closeModal(editModal);
     })
-    .catch(console.error)
+    .catch((err) => console.error("Couldn't publish form", err))
     .finally(() => {
       setButtonText(submitBtn, false);
     });
@@ -181,7 +181,7 @@ function handleAddCardSubmit(evt) {
       disableButton(cardSubmitBtn, settings);
       closeModal(cardModal);
     })
-    .catch(console.error)
+    .catch((err) => console.error("Couldn't publish card", err))
     .finally(() => {
       setButtonText(submitBtn, false);
     });
@@ -201,7 +201,7 @@ function handleAvatarSubmit(evt) {
       disableButton(avatarSubmitBtn, settings);
       closeModal(avatarModal);
     })
-    .catch(console.error)
+    .catch((err) => console.error("Couldn't publish avatar", err))
     .finally(() => {
       setButtonText(submitBtn, false);
     });
@@ -217,7 +217,7 @@ function handleDeleteSubmit(evt) {
       selectedCard.remove();
       closeModal(deleteModal);
     })
-    .catch(console.error)
+    .catch((err) => console.error("Couldn't delete card", err))
     .finally(() => {
       setButtonText(submitBtn, false, "Deleting...", "Delete");
     });
