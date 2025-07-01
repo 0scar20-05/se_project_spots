@@ -30,6 +30,11 @@
   border-radius: 5px;
 }
 
+#delete-modal .modal__container {
+  max-width: 770px;
+  padding: 32px 20px;
+}
+
 .modal__image-container {
   position: relative;
 }
@@ -66,6 +71,15 @@
   left: calc(100% + 12px);
 }
 
+#delete-modal .modal__close-btn {
+  position: absolute;
+  opacity: 100%;
+  background-image: url(../images/WhiteX.svg);
+  top: 0px;
+  left: 780px;
+  right: 0px;
+}
+
 .modal__close-btn:hover {
   opacity: 1;
 }
@@ -92,6 +106,11 @@
   font-size: 32px;
   line-height: 1;
   color: rgba(33, 33, 33, 1);
+}
+
+#delete-modal .modal__title {
+  text-align: center;
+  margin: 0 0 32px;
 }
 
 .modal__label {
@@ -130,6 +149,47 @@
   color: rgba(255, 0, 0, 0.7);
   font-weight: 500;
   size: 16px;
+}
+
+.modal__form_delete {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal__delete-btn {
+  width: 156px;
+  padding: 18px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(33, 33, 33, 1);
+  background-color: rgba(255, 101, 101, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal__delete-btn:hover {
+  background-color: rgba(255, 51, 51, 1);
+}
+
+.modal__cancel-btn {
+  width: 156px;
+  padding: 18px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(33, 33, 33, 1);
+  background-color: white;
+  border: 1px solid rgba(33, 33, 33, 1);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal__cancel-btn:hover {
+  color: rgba(252, 245, 229, 1);
+  background-color: rgba(33, 33, 33, 1);
 }
 
 .modal__submit-btn {
@@ -188,5 +248,17 @@
   .modal__image {
     max-width: 90vw;
     max-height: 90vh;
+  }
+
+  .modal__form_delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #delete-modal .modal__close-btn {
+    top: -55px;
+    right: 2px;
+    left: auto;
   }
 }
